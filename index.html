@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+    <title>Login</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* POPPINS FONT */
+ /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); */
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    /* //background: url('2.png'); */
+    background-color: bisque;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 80vh; */
+    max-height: fit-content;
+    
+}
+.container{
+    color: white;
+    margin: auto;
+    background-color:  #22a2ac;
+    /* background: url("1.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    min-height: 400px;
+    max-width: 400px;
+    min-width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                0 2px 20px 0 rgba(0,0,0,0.2);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    font-size: 30px;
+    color: #fff;
+}
+.input-container{
+    margin: 30px 30px 10px 30px;
+    color: #fff;
+}
+label{
+    color: #fff;
+    margin: 0 0 5px 15px;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 15px 0;
+}
+
+input,select{
+    outline: none;
+    padding: 0 20px 0 20px;
+    border: 2px solid rgba(255,255,255, 0.015);
+    background: rgba(255,255,255,0.35);
+    height: 38px;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.085),
+                0 2px 30px 0 rgba(0,0,0,0.2);
+    border-radius: 50px;
+    font-size: 16px;
+    color: #fff;
+}
+input:focus,input:valid,select:focus,select:valid{
+    border: 2px solid rgba(255,255,255,0.65);
+    /* background: transparent; */
+    background: bisque;
+    box-shadow: none;
+    border-radius: 30px;
+    color: #22a2ac;
+}
+
+.submit{
+    background: transparent;
+    height: 40px;
+    border: 2px solid rgba(255,255,255,0.65);
+    box-shadow: none;
+    transition: .3s ease-in-out;
+    margin-top: 10px;
+}
+.submit:hover{
+    color: rgb(106,87,168);
+    cursor: pointer;
+    border: 2px solid rgba(255,255,255,0.016);
+    /* background: rgba(255,255,255,0.35); */
+    background: bisque;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.085),
+                0 2px 30px 0 rgba(0,0,0,0.2);
+}
+span{
+    display: flex;
+    justify-content: right;
+}
+span a{
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+    /* * {
+        box-sizing: border-box;
+    } */
+
+    nav {
+
+    /* background: url("1.png"); */
+        overflow: hidden;
+        background-color: #22a2ac;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .links {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+    }
+
+    nav .logo {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    nav .links:hover {
+        background-color: bisque;
+         /* rgb(214, 238, 77); */
+        color: #22a2ac;
+        /* blue; */
+         /* rgb(42, 10, 94); */
+    }
+
+
+    nav .selected {
+        /* background-color: dodgerblue; */
+        color: white;
+    }
+
+    .rightSection {
+        float: right;
+    }
+
+    @media screen and (max-width: 570px) {
+        nav .links {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        .rightSection {
+            float: left;
+        }
+    }
+    </style>
+</head>
+<body>
+<!-- ------------------------------------------------------------------------------------- -->
+
+    <nav class="">
+        <a class="links logo" href="#">Expiry Alart</a>
+        <div class="rightSection">
+            <a class="selected links" href="h">Unsubscribe</a>
+            <a class="links" href="https://script.google.com/macros/s/AKfycbxsuOkIKCDfbvLh8u0rUXobR_K1qqtQQWJT_DLEJTwp/dev">Admin</a>
+            <!-- <a class="links" href="#">Your benifits</a> -->
+            <!-- <a class="links" href="#">Contact us</a>  -->
+        </div>
+    </nav>
+  
+
+
+
+    <form  class="container" action="http://localhost:8080/">
+        <div class="header">
+            <header>LOGIN</header>
+        </div>
+    
+     
+        <div class="input-container">
+           
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>  
+            </div>
+            <div class="input-field">
+                <label for="cemail">Password</label>
+                <input type="password" name="cemail" id="cemail" required>  
+            </div>
+
+               
+              
+                    
+            <div class="input-field">
+                
+                <input type="submit" class="submit"  name="submit" value="LOGIN">  
+            </div>
+            
+        </div>
+    </form>
+
+    <nav>
+        <!-- <a class="links logo" href="#">Expiry Alart</a> -->
+        <div>
+            <a class="selected links" href="h">Unsubscribe</a>
+            <a class="links" href="#">+2348122841261</a>
+            <a class="links" href="#">kabsyaksameer@gmail.com</a>
+        </div>
+    </nav>
+
+    
+</body>
+
+</html>
