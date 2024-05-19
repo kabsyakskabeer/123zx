@@ -67,6 +67,10 @@
     </section>
 
     <script>
+       window.onload = function(){
+            jsonLoader();   
+          
+        }
         function jsonLoader(){
             let theString ="";
             let druglist = "";
@@ -95,11 +99,7 @@
             });
         }
         
-        window.onload = function(){
-            jsonLoader();   
-          //  quantityInput.value = 0;
-           // total.value =0;
-        }
+       
     </script>
 
   </body>
