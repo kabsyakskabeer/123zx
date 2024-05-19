@@ -28,8 +28,8 @@
     </nav>
     <section>
       <div class="list-header"> expire in 10 days</div>
-     <div class="list-container">
-        <ul>
+     <div class="list-container" id="elist">
+        <!-- <ul>
             <li>Cap. Moxeel(amoxicillin) manufacture by specsx wiill expire in 20 days(12/11/2025)</li>
             <li>Cap. Moxeel(amoxicillin) manufacture by specsx wiill expire in 20 days(12/11/2025)</li>
             <li>Cap. Moxeel(amoxicillin) manufacture by specsx wiill expire in 20 days(12/11/2025)</li>
@@ -41,7 +41,7 @@
             <li>Cap. Moxeel(amoxicillin) manufacture by specsx wiill exCap. Moxeel(amoxicillin) manufacture by specsx wiill exCap. Moxeel(amoxicillin) manufacture by specsx wiill exCap. Moxeel(amoxicillin) manufacture by specsx wiill expire in 20 days(12/11/2025)</li>
             <li>Cap. Moxeel(amoxicillin) manufacture by specsx wiill expire in 20 days(12/11/2025)</li>
             <li>Cap. Moxeel(amoxicillin) manufacture by specsx wiill expire in 20 days(12/11/2025)</li>
-        </ul>
+        </ul> -->
        
      </div>
 
@@ -85,13 +85,13 @@
                   
                    for (let index = 0; index < myDrugs.length; index++) {
                         const element = myDrugs[index];
-                        theString += `<li id=${(element.name).replace(/\s/g, '')}> <span id="drug-name">${element.name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.price}</span> </li>`;
-                        druglist += `<option value="${element.name}">`;   
+                        theString += `<li id=${(element.branch_name).replace(/\s/g, '')}> <span id="drug-name">${element.company_name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.expiry_date}</span> </li>`;
+                       // druglist += `<option value="${element.name}">`;   
                     }
                    
                    
-                document.getElementById("main").innerHTML = `<ol> ${theString} </ol>`;  
-                document.getElementById("drugList").innerHTML = druglist;    
+                document.getElementById("elist").innerHTML = `<ol> ${theString} </ol>`;  
+             // document.getElementById("drugList").innerHTML = druglist;    
             });
         }
     </script>
