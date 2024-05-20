@@ -92,8 +92,9 @@
                   
                    for (let index = 0; index < myDrugs.length; index++) {
                         const element = myDrugs[index];
-                        theString += `<li id=${(element.branch_name).replace(/\s/g, '')}> <span id="drug-name">${element.company_name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.expiry_date}</span> </li>`;
-                       // druglist += `<option value="${element.name}">`;   
+                        theString += element.branch_name;
+                       // theString += `<li id=${(element.branch_name).replace(/\s/g, '')}> <span id="drug-name">${element.company_name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.expiry_date}</span> </li>`;
+                        //druglist += `<option value="${element.name}">`;   
                     }
                    
                    
