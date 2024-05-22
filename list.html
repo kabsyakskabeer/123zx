@@ -92,16 +92,17 @@
                   
                    for (let index = 0; index < myDrugs.length; index++) {
                         const element = myDrugs[index];
-                        theString += element.brand_name;
-                       // theString += `<li id=${(element.branch_name).replace(/\s/g, '')}> <span id="drug-name">${element.company_name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.expiry_date}</span> </li>`;
-                        //druglist += `<option value="${element.name}">`;   
+                        theString += `<li>${element.branch_name}</li>`;
+                       
+                      //  theString += `<li id=${(element.branch_name).replace(/\s/g, '')}> <span id="drug-name">${element.company_name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.expiry_date}</span> </li>`;
+                         
                     }
+        
                    
-                   
-                document.getElementById("elist").innerHTML =`<ol> ${theString} </ol>`;  
-             // document.getElementById("drugList").innerHTML = druglist;    
+                document.getElementById("elist").innerHTML =`<ol> ${theString} </ol>`; 
+
             });
-            ///document.getElementById("elist").innerHTML = "sameer";
+            
         }
         
        
