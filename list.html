@@ -15,28 +15,25 @@
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <label class="logo">DrugExpiry</label>
+      <label class="logo">ExpiryIndex</label>
       <ul class="my-ul">
         
         <li> <a class="selected links" href="h">profile</a></li>
        <li> <a class="links" href="https://script.google.com/macros/s/AKfycbxsuOkIKCDfbvLh8u0rUXobR_K1qqtQQWJT_DLEJTwp/dev">Admin</a></li>
-        <!-- <li><a href="#">About</a></li> -->
-        <!-- <li><a href="#">Services</a></li> -->
         <li><a href="#">Contact</a></li>
         <li><a href="#">Feedback</a></li>
+        <li><a href="#">Buy or Sale</a></li>
+        
       </ul>
     </nav>
     <section>
       <div class="list-header"> less than 60 days</div>
      <div class="list-container" id="elist"></div>
     </section>
-
     <script>
        let items = document.getElementById("items");
        window.onload = function(){
-      
-            jsonLoader();   
-          
+        jsonLoader();   
         }
         function jsonLoader(){
             let theString ="";
