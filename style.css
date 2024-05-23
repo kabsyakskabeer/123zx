@@ -82,15 +82,15 @@ a.active,a:hover{
   }
   nav ul li{
     display: block;
-    margin: 50px 0;
+    margin: 30px 0;
     line-height: 30px;
   }
-  nav ul li a{
+  nav ul li{
     font-size: 20px;
   }
-  nav ul li button{
+  /* nav ul li a{
     font-size: 20px;
-  }
+  } */
   a:hover,a.active{
     background: none;
     color: #0082e6;
