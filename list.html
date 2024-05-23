@@ -96,10 +96,8 @@
                        
                       //  theString += `<li id=${(element.branch_name).replace(/\s/g, '')}> <span id="drug-name">${element.company_name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.expiry_date}</span> </li>`;
                          
-                    }
-        
-                   
-                document.querySelector("list-container").innerHTML =`<ol> ${theString} </ol>`; 
+                    } 
+                document.querySelector(".list-container").innerHTML =`<ol> ${theString} </ol>`; 
 
             });
             
