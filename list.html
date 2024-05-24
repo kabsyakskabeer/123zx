@@ -17,8 +17,6 @@
       </label>
       <label class="logo">ExpiryIndex</label>
       <ul class="my-ul">
-        <!-- <li><button>for sale</button></li> -->
-        <!-- <li><a href="#">for sale</a></li> -->
         <li><a href='javascript:;' onclick='for_sale();'>for sale</a></li>
         <li><a href="#">Buy</a></li>
        <!-- <li> <a class="links" href="https://script.google.com/macros/s/AKfycbxsuOkIKCDfbvLh8u0rUXobR_K1qqtQQWJT_DLEJTwp/dev">Admin</a></li> -->
@@ -38,7 +36,9 @@
         jsonLoader();   
         }
         function for_sale(){
-          console.log("for sale clicked")
+          theString += `the list goes here`
+          document.querySelector(".list-container").innerHTML =`<ul> ${theString} </ul>`; 
+          
         }
         function jsonLoader(){
             let theString ="";
