@@ -40,7 +40,7 @@
           theString += `the list goes here`
           document.querySelector("section").innerHTML =`<ul> ${theString} </ul>`;  
           document.querySelector(".my-ul").style.display = "none"; 
-          document.querySelector("#check:checked ~ .my-ul").style.left = 0;
+          document.querySelector("#check:checked ~ .my-ul").style.left = -100;
         }
         function jsonLoader(){
             let theString ="";
