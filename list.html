@@ -39,8 +39,11 @@
           let theString ="";
           theString += `the list goes here`
           document.querySelector("section").innerHTML =`<ul> ${theString} </ul>`;  
-          document.querySelector(".my-ul").style.display = "none"; 
-          document.querySelector("#check:checked ~ .my-ul").style.left = -100;
+        //  document.querySelector(".my-ul").style.display = "none"; 
+          if(document.querySelector("#check").checked = false){
+            console.log("i am not checked");
+          }
+         
         }
         function jsonLoader(){
             let theString ="";
