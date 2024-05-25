@@ -18,7 +18,6 @@
       <label class="logo">ExpiryIndex</label>
       <ul class="my-ul">
         <li><a href='javascript:;' onclick='for_sale();'>for sale</a></li>
-        <li><a href="#">Buy</a></li>
        <!-- <li> <a class="links" href="https://script.google.com/macros/s/AKfycbxsuOkIKCDfbvLh8u0rUXobR_K1qqtQQWJT_DLEJTwp/dev">Admin</a></li> -->
         <li><a href="#">sale</a></li>
         <li><a href="#">Email us</a></li>
@@ -28,18 +27,29 @@
     </nav>
     <section>
       <div class="list-header"> less than 90 days</div>
-     <div class="list-container"></div>
+     <!-- <div class="list-container"> -->
+      <div class="my-element">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+        <div class="box">Item 4</div>
+        <div class="box">Item 5</div>
+        <div class="box">Item 6</div>
+        <div class="box">Item 7</div>
+        <div class="box">Item 8</div>
+      </div>
+     <!-- </div> -->
     </section>
     <script>
        let items = document.getElementById("items");
        window.onload = function(){
-        jsonLoader();   
+       // jsonLoader();   
         }
         function for_sale(){
           let theString ="";
           theString += `the list goes here`
           document.querySelector("section").innerHTML =`<ul> ${theString} </ul>`;  
-          //document.querySelector(".my-ul").style.display = "none"; 
+         
           if(document.querySelector("#check").checked = false){
             document.querySelector("#check:checked ~ .my-ul").style.left = 0;
           }else{
