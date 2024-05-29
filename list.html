@@ -35,8 +35,40 @@
          jsonLoader();   
         }
         function for_sale(){
+
+
           let theString ="";
-          theString += `the list goes here`
+            let druglist = "";
+            let sList = "";
+            fetch('drug.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("HTTP error " + response.status);
+                    }
+                    
+                    return response.text();
+                })
+                .then(prices => {
+                   myDrugs = JSON.parse(prices);
+                  
+                  
+                   for (let index = 0; index < myDrugs.length; index++) {
+                        const element = myDrugs[index];
+
+                        theString += `<li> <b>${element.brand_name}</b>(${element.chemical_name}) <br> <b>By:</b> ${element.company_name} <br> <b>Batch:</b> ${element.batch_number} <br> <b>Expire:</b> ${element.expiry_date}</li>`;
+                       
+                      //  theString += `<li id=${(element.branch_name).replace(/\s/g, '')}> <span id="drug-name">${element.company_name} </span>  <span id="drug-quantity">  </span> <span id="drug-price">${element.expiry_date}</span> </li>`;
+                         
+                    } 
+                    document.querySelector("section").innerHTML =`<ul> ${theString} </ul>`;  
+               // document.querySelector(".list-container").innerHTML =`<ul> ${theString} </ul>`; 
+
+            });
+
+
+
+         // let theString ="";
+         // theString += `the list goes here`
           document.querySelector("section").innerHTML =`<ul> ${theString} </ul>`;  
          
           if(document.querySelector("#check").checked = false){
